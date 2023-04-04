@@ -1,37 +1,34 @@
-*{
+* {
   margin: 0;
   padding: 0;
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
 }
-body{
-  font-family: 'Poppins', sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
   font-weight: bolder;
   overflow: hidden;
   background: #191d2b;
 }
 
 /* Stylisation du titre pour qu'il n'apparaisse pas sur page complète*/
-.titre{
- display: none;
- position: absolute;
- margin-left: auto;
- margin-right: auto;
- left: 0;
- right: 0;
- top: 10px;
+.titre {
+  display: none;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 10px;
 }
-.titre h1{
+.titre h1 {
   text-align: center;
   color: white;
 }
 /*Fin de titre*/
 
-
-
-
-nav{
+nav {
   padding: 30px;
   width: 100%;
   display: flex;
@@ -40,20 +37,21 @@ nav{
   z-index: 1;
   height: 100%;
 }
-nav a{
+nav a {
   color: white;
 }
-.lien-nav ul{
+.lien-nav ul {
   display: flex;
 }
 .lien-nav ul li {
   margin: 0 25px;
 }
-.lien-nav ul li a:hover{
-  color: #27AE60;
+.lien-nav ul li a:hover {
+  color: #27ae60;
 }
 
-nav .menu-hamburger{ /*Menu hamburger qui n'est pas affiché sur page complète*/
+nav .menu-hamburger {
+  /*Menu hamburger qui n'est pas affiché sur page complète*/
   display: none;
   position: absolute;
   top: 20px;
@@ -61,7 +59,7 @@ nav .menu-hamburger{ /*Menu hamburger qui n'est pas affiché sur page complète*
   width: 35px;
 }
 .pageActive a {
-  color: #27AE60;
+  color: #27ae60;
 }
 
 /*La page est une grille de deux colonnes (colonne 1 : pageGauche, colonne 2: pageDroite)*/
@@ -75,13 +73,15 @@ nav .menu-hamburger{ /*Menu hamburger qui n'est pas affiché sur page complète*
   width: 300px;
   height: 75%;
   object-fit: cover;
-  transition: all 0.75s;/*transition fluide de l'agrandissement de l'image sur le hover*/
+  transition: all 0.75s; /*transition fluide de l'agrandissement de l'image sur le hover*/
   border-radius: 20px;
   display: block;
-  margin:  2rem auto;
+  margin: 2rem auto;
 }
 .page .pageGauche img:hover {
-transform: scale(1.02); /*Agrandi La taille de l'image quand le cursor est au-dessus de l'image*/
+  transform: scale(
+    1.02
+  ); /*Agrandi La taille de l'image quand le cursor est au-dessus de l'image*/
 }
 .page .pageDroite {
   display: flex;
@@ -90,18 +90,18 @@ transform: scale(1.02); /*Agrandi La taille de l'image quand le cursor est au-de
   color: white;
   margin-top: 2rem;
 }
-.page .pageDroite .presentation{
+.page .pageDroite .presentation {
   font-size: 3rem;
 }
-.page .pageDroite .presentation .nom{
-  color:#27AE60;
+.page .pageDroite .presentation .nom {
+  color: #27ae60;
 }
 .page .pageDroite p {
   margin: 1.5rem 0;
 }
 
 /*Stylisation du bouton de téléchargement*/
-.containerBouton{
+.containerBouton {
   display: flex;
   align-self: flex-start;
 }
@@ -110,7 +110,7 @@ transform: scale(1.02); /*Agrandi La taille de l'image quand le cursor est au-de
   color: inherit;
   font-weight: 600;
   position: relative;
-  border: 1px solid #27AE60;
+  border: 1px solid #27ae60;
   display: flex;
   align-self: flex-start;
   align-items: center;
@@ -140,7 +140,7 @@ transform: scale(1.02); /*Agrandi La taille de l'image quand le cursor est au-de
 .bouton:hover::before {
   width: 100%;
   height: 100%;
-  background-color: #27AE60;
+  background-color: #27ae60;
   transform: translateX(0);
 }
 /* Findu bouton de téléchargement*/
@@ -148,24 +148,24 @@ transform: scale(1.02); /*Agrandi La taille de l'image quand le cursor est au-de
 /*Fin de la page*/
 
 @media screen and (max-width: 1030px) {
-  body{
+  body {
     overflow-y: visible; /*Apparition de la barre de défilement verticale car longueur de l'écran plus grande*/
   }
 }
 @media screen and (max-width: 900px) {
-  .titre{
+  .titre {
     display: block; /*Apparition du titre de la page*/
   }
-  nav{
+  nav {
     padding: 0;
   }
-  nav .menu-hamburger{
+  nav .menu-hamburger {
     display: block;
     cursor: pointer;
     z-index: 2;
   }
-  .lien-nav{
-    position:fixed;
+  .lien-nav {
+    position: fixed;
     background: rgba(255, 255, 255, 0.342);
     background-size: cover;
     width: 100%;
@@ -173,16 +173,18 @@ transform: scale(1.02); /*Agrandi La taille de l'image quand le cursor est au-de
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(7px);/*filtre qui floute le contenu derrière les liens-nav*/
-    margin-right: -200%;/* Rend invisible la nav*/
+    backdrop-filter: blur(
+      7px
+    ); /*filtre qui floute le contenu derrière les liens-nav*/
+    margin-right: -200%; /* Rend invisible la nav*/
     transition: all 0.5s;
     z-index: 2;
     overflow: hidden;
   }
-  .lien-nav.mobile-menu{
-    margin-right: 0;/* Rend visible la navb car la marge de la nav à droite est remis à zéro*/
+  .lien-nav.mobile-menu {
+    margin-right: 0; /* Rend visible la navb car la marge de la nav à droite est remis à zéro*/
   }
-  .lien-nav ul{
+  .lien-nav ul {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -190,16 +192,19 @@ transform: scale(1.02); /*Agrandi La taille de l'image quand le cursor est au-de
   .lien-nav ul li {
     margin: 25px 0;
   }
-  .lien-nav ul li a{
+  .lien-nav ul li a {
     color: black;
   }
-  .lien-nav ul li a:hover{
-    color: #27AE60;
+  .lien-nav ul li a:hover {
+    color: #27ae60;
   }
   .page {
-    grid-template-columns: repeat(1, 1fr);/*Passage de la grille à une seule colonne*/
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /*Passage de la grille à une seule colonne*/
   }
-  .page .pageGauche img{
+  .page .pageGauche img {
     height: 90%;
     display: block;
     margin: 1rem auto;
@@ -216,8 +221,7 @@ transform: scale(1.02); /*Agrandi La taille de l'image quand le cursor est au-de
     padding-top: 3rem;
     text-align: center;
   }
-  .containerBouton{
+  .containerBouton {
     margin: auto;
   }
-
 }
