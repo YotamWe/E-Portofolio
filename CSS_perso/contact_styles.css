@@ -1,0 +1,229 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
+  overflow-x: hidden;
+  background: #191d2b;
+}
+
+.titre{
+ display: none;
+ position: absolute;
+ margin-left: auto;
+ margin-right: auto;
+ left: 0;
+ right: 0;
+ top: 10px;
+}
+.titre h1{
+  text-align: center;
+  color: white;
+}
+
+nav{
+  padding: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  z-index: 1;
+  height: 100%;
+}
+nav a{
+  color: white;
+}
+.lien-nav ul{
+  display: flex;
+}
+.lien-nav ul li {
+  margin: 0 25px;
+}
+.lien-nav ul li a:hover{
+  color: #27AE60;
+}
+
+nav .menu-hamburger{
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  width: 35px;
+}
+.pageActive a {
+  color: #27AE60;
+}
+
+
+#container{
+  width: 100vw;
+  height: 100vh;
+  margin-top: 100px;
+  top: 0;
+  position: absolute;
+  z-index: 0;
+}
+#containerForm{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+form{
+  background: rgba(223, 221, 221, 0.3);
+  padding: 1rem 1rem;
+  width: 70vh;
+  border-radius: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.429);
+  text-align: center;
+  backdrop-filter: blur(7px);
+}
+.titreFormulaire{
+  color: white;
+  font-weight: 500;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+input, .message{
+  background-color: transparent;
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 1rem;
+  width: 85%;
+  border-radius: 50px;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s;
+  margin-bottom: 6px;
+  color: white;
+  font-weight: bolder;
+  box-sizing: border-box;
+}
+::placeholder{
+  color: white;
+  font-weight: 100;
+}
+input:hover, .message:hover{
+  background: rgba(255, 255, 255, 0.2);
+}
+input:focus{
+  border: none;
+}
+.message{
+  height: 120px;
+  border-radius: 15px;
+  resize: none;
+  font-size: 14px;
+}
+input[type="submit"]{
+  color: white;
+  margin-top: 10px;
+  transition: all 0.5s;
+}
+input[type="submit"]:hover{
+  cursor: pointer;
+  background-color: #27AE60;
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.7);
+}
+#follow{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#follow p{
+  margin-right: 20px;
+}
+#follow a {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+  margin-bottom: 1rem;
+}
+#follow .textFollow{
+  color: white;
+}
+.iconInsta {
+  background-image: linear-gradient( 71deg, rgb(255,221,85) 1%, rgb(255,221,85) 10%, rgb(255,84,62) 50%, rgb(200,55,171) 100%);
+}
+
+.titreTableau{
+  color: white;
+  text-align: center;
+  margin-top: 80px;
+}
+table{
+  width: 40%;
+  margin: 10px auto;
+  color: white;
+}
+table td, th{
+  border-collapse: collapse;
+  text-align: center;
+}
+th, td{
+  width: 40px;
+}
+
+@media screen and (max-width: 830px) {
+  .titre{
+    display: block;
+  }
+  nav{
+    padding: 0;
+  }
+  nav .menu-hamburger{
+    display: block;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .lien-nav{
+    position:fixed;
+    background: rgba(255, 255, 255, 0.342);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(7px);
+    margin-right: -200%;
+    transition: all 0.5s;
+    z-index: 2;
+    overflow: hidden;
+  }
+  .lien-nav.mobile-menu{
+    margin-right: 0;
+  }
+  .lien-nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .lien-nav ul li {
+    margin: 25px 0;
+  }
+  .lien-nav ul li a{
+    color: black;
+  }
+  .lien-nav ul li a:hover{
+    color: #27AE60;
+  }
+}
+
+
+

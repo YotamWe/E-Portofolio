@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="CSS_bs/bootstrap.min.css"/>
+        <link rel="stylesheet" href="CSS_perso/competences_styles.css" />
+        <title>Compétences</title>
+    </head>
+    <body>
+<!---------------------------Création d'un titre pour le format mobile------------------------------->
+        <div class="titre">
+            <h1>Compétences</h1>
+        </div>
+<!-------------------------------------------Fin----------------------------------------------------->
+<!---------------------------------------Début de la nav -------------------------------------------->  
+        <nav>
+            <div class="lien-nav">
+                <ul>
+                    <li><a href="accueil.html"> Accueil </a></li>
+                    <li class="pageActive"><a href="competences.html">Compétences</a></li>
+                    <li><a href="experiences.html">Expériences</a></li>
+                    <li><a href="loisirs.html">Loisirs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <img src="images/white_menu_icon.png" alt="" class="menu-hamburger">
+        </nav>
+<!-----------------------------------------Fin de la nav --------------------------------------------->
+<!-------------------------------Début des cartes compétences en Bootstrap ---------------------------> 
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="card" style="width: 70%;">
+                    <img src="images/html.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Niveau débutant (environ 40 H)</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="card" style="width: 70%;">
+                    <img src="images/CSS.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Niveau débutant (environ 40 H)</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="card" style="width: 70%;">
+                    <img src="images/logoC.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Niveau débutant (environ 60 H)</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="card" style="width: 70%;">
+                    <img src="images/logojava.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Niveau avancée(environ 150 H)</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-------------------------------Fin des cartes compétences en Bootstrap --------------------------->
+    </body>
+<!-------------------------------Script qui permet de créer une nouvelle classe  "mobile-menu"
+     quand l'image du menu-hamburger est cliqué------------------------------------------->
+    <script>
+        const menuHamburger = document.querySelector(".menu-hamburger")
+        const navLinks = document.querySelector(".lien-nav")
+
+        menuHamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('mobile-menu')
+        })
+    </script>
+<!-------------------------------Fin du script menu-hamburger------------------------------------------->
+</html>

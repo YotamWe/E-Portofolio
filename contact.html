@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS_perso/contact_styles.css" />
+    <title>Contact</title>
+  </head>
+  <body>
+    <div class="titre"> <h1>Contact</h1> </div>
+    <nav>
+      <div class="lien-nav">
+        <ul>
+          <li><a href="accueil.html"> Accueil </a></li>
+          <li><a href="competences.html">Compétences</a></li>
+          <li><a href="experiences.html">Expériences</a></li>
+          <li><a href="loisirs.html">Loisirs</a></li>
+          <li class="pageActive"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <img src="images/white_menu_icon.png" alt="" class="menu-hamburger">
+    </nav>
+    <div id="container">
+      <div id="containerForm">
+        <form>
+          <p class="titreFormulaire">N'hésitez pas à me contacter !</p>
+          <input type="text" placeholder="Nom" name="nom"><br>
+          <input type="email" placeholder="Email" name="email"><br>
+          <input type="text" placeholder="Objet" name="sujet"><br>
+          <textarea class="message" name="message" placeholder="Votre message" rows="5" cols="33"></textarea><br>
+          <input type="submit" value="Envoyez">
+        </form>
+      </div>
+      <div id="table">
+        <div class="titreTableau"> <h2>Contactez-moi !</h2> </div>
+        <table>
+          <tr>
+              <th> Numéro : </th>
+              <td> 06.42.47.90.42 </td>
+          </tr>
+          <tr>
+              <th> Email : </th>
+              <td> yweber.03@gmail.com</td>
+          </tr>
+          <tr>
+              <th> Ma localisation : </th>
+              <td> Montreuil</td>
+          </tr>
+          <tr>
+              <th> Language :</th>
+              <td> Français, Anglais </td>
+          </tr>
+        </table>
+      </div>
+      <div id="follow">
+        <p class="textFollow">Suivez-moi sur : </p>
+        <a href="#" class="iconInsta"><img src="images/icon-insta.png" alt=""></a>
+        <a href="#" class="iconLinkedin"><img src="images/icon-linkedin.png" alt=""></a>
+        <a href="#"><img src="" alt=""></a>
+      </div>
+    </div>
+  </body>
+  <script>
+    const menuHamburger = document.querySelector(".menu-hamburger")
+    const navLinks = document.querySelector(".lien-nav")
+
+    menuHamburger.addEventListener('click',()=>{
+    navLinks.classList.toggle('mobile-menu')
+    })
+  </script>
+
+</html>

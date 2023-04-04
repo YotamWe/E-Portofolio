@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://kit.fontawesome.com/0c762ee4ac.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="CSS_perso/loisirs_styles.css" />
+        <title>Loisirs</title>
+    </head>
+    <body>
+        <div class="titre"> <h1>Loisirs</h1> </div>
+        <nav>
+            <div class="lien-nav">
+                <ul>
+                    <li><a href="accueil.html"> Accueil </a></li>
+                    <li><a href="competences.html">Compétences</a></li>
+                    <li><a href="experiences.html">Expériences</a></li>
+                    <li class= "pageActive"><a href="loisirs.html">Loisirs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <img src="images/white_menu_icon.png" alt="" class="menu-hamburger">
+        </nav>
+        <div class="loisirs">
+            <div class="loisir-item">
+                <img src="images/volleyball.jpg" alt="">
+                <div class="surImage">
+                    <h3>Le volleyball</h3>
+                    <p>L'une des mes grandes passions, j'en fais depuis 5 ans.</p>
+                </div>
+            </div>
+            <div class="loisir-item">
+                <img src="images/scoutisme.jpg" alt="">
+                <div class="surImage">
+                    <h3>Le scoutisme</h3>
+                    <p>Je pratique le scoutisme depuis maintenant 10 ans.
+                        Cela me permet de me vider l'esprit tout en étant actif sur l'apprentissage 
+                        des pratiques scouts aux jeunes.
+                    </p>
+                </div>
+            </div>
+            <div class="loisir-item">
+                <img src="images/jeuxvideos.jpg" alt="">
+                <div class="surImage">
+                    <h3>Les Jeux vidéos</h3>
+                    <p>Grand classique des loisirs, les jeux vidéos sont, pour moi, 
+                        le meilleur moyen de se détendre et de penser à autre chose.
+                    </p>
+                </div>
+            </div>
+            <div class="loisir-item">
+                <img src="images/sieste.jpg" alt="">
+                <div class="surImage">
+                    <h3>La sieste</h3>
+                    <p>Malgré l'idée que l'on peut se faire de la sieste, c'est une actvité 
+                        importante pour moi car elle me permet 
+                        d'être plus productif dans une longue journée.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <header></header>
+    </body>
+  <script>
+    const menuHamburger = document.querySelector(".menu-hamburger")
+    const navLinks = document.querySelector(".lien-nav")
+
+    menuHamburger.addEventListener('click',()=>{
+    navLinks.classList.toggle('mobile-menu')
+    })
+  </script>
+
+</html>
+
+

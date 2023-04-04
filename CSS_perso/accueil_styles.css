@@ -1,0 +1,223 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
+  overflow: hidden;
+  background: #191d2b;
+}
+
+/* Stylisation du titre pour qu'il n'apparaisse pas sur page complète*/
+.titre{
+ display: none;
+ position: absolute;
+ margin-left: auto;
+ margin-right: auto;
+ left: 0;
+ right: 0;
+ top: 10px;
+}
+.titre h1{
+  text-align: center;
+  color: white;
+}
+/*Fin de titre*/
+
+
+
+
+nav{
+  padding: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  z-index: 1;
+  height: 100%;
+}
+nav a{
+  color: white;
+}
+.lien-nav ul{
+  display: flex;
+}
+.lien-nav ul li {
+  margin: 0 25px;
+}
+.lien-nav ul li a:hover{
+  color: #27AE60;
+}
+
+nav .menu-hamburger{ /*Menu hamburger qui n'est pas affiché sur page complète*/
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  width: 35px;
+}
+.pageActive a {
+  color: #27AE60;
+}
+
+/*La page est une grille de deux colonnes (colonne 1 : pageGauche, colonne 2: pageDroite)*/
+.page {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 100vh;
+}
+
+.page .pageGauche img {
+  width: 300px;
+  height: 75%;
+  object-fit: cover;
+  transition: all 0.75s;/*transition fluide de l'agrandissement de l'image sur le hover*/
+  border-radius: 20px;
+  display: block;
+  margin:  2rem auto;
+}
+.page .pageGauche img:hover {
+transform: scale(1.02); /*Agrandi La taille de l'image quand le cursor est au-dessus de l'image*/
+}
+.page .pageDroite {
+  display: flex;
+  flex-direction: column;
+  padding-right: 10rem;
+  color: white;
+  margin-top: 2rem;
+}
+.page .pageDroite .presentation{
+  font-size: 3rem;
+}
+.page .pageDroite .presentation .nom{
+  color:#27AE60;
+}
+.page .pageDroite p {
+  margin: 1.5rem 0;
+}
+
+/*Stylisation du bouton de téléchargement*/
+.containerBouton{
+  display: flex;
+  align-self: flex-start;
+}
+.bouton {
+  border-radius: 30px;
+  color: inherit;
+  font-weight: 600;
+  position: relative;
+  border: 1px solid #27AE60;
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+  transition: all 0.4s ease-out;
+}
+.bouton .textBouton {
+  padding: 0 2rem;
+}
+.bouton .iconBouton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 1rem;
+}
+.bouton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: all 0.4s ease-out;
+  z-index: -1;
+}
+.bouton:hover::before {
+  width: 100%;
+  height: 100%;
+  background-color: #27AE60;
+  transform: translateX(0);
+}
+/* Findu bouton de téléchargement*/
+
+/*Fin de la page*/
+
+@media screen and (max-width: 1030px) {
+  body{
+    overflow-y: visible; /*Apparition de la barre de défilement verticale car longueur de l'écran plus grande*/
+  }
+}
+@media screen and (max-width: 900px) {
+  .titre{
+    display: block; /*Apparition du titre de la page*/
+  }
+  nav{
+    padding: 0;
+  }
+  nav .menu-hamburger{
+    display: block;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .lien-nav{
+    position:fixed;
+    background: rgba(255, 255, 255, 0.342);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(7px);/*filtre qui floute le contenu derrière les liens-nav*/
+    margin-right: -200%;/* Rend invisible la nav*/
+    transition: all 0.5s;
+    z-index: 2;
+    overflow: hidden;
+  }
+  .lien-nav.mobile-menu{
+    margin-right: 0;/* Rend visible la navb car la marge de la nav à droite est remis à zéro*/
+  }
+  .lien-nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .lien-nav ul li {
+    margin: 25px 0;
+  }
+  .lien-nav ul li a{
+    color: black;
+  }
+  .lien-nav ul li a:hover{
+    color: #27AE60;
+  }
+  .page {
+    grid-template-columns: repeat(1, 1fr);/*Passage de la grille à une seule colonne*/
+  }
+  .page .pageGauche img{
+    height: 90%;
+    display: block;
+    margin: 1rem auto;
+  }
+  .page .pageDroite {
+    grid-row: 1;
+    width: 100%;
+    padding: 0;
+    padding: 1rem;
+    text-align: center;
+  }
+  .page .pageDroite .presentation {
+    font-size: 2.5rem;
+    padding-top: 3rem;
+    text-align: center;
+  }
+  .containerBouton{
+    margin: auto;
+  }
+
+}

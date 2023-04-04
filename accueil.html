@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CSS_perso/accueil_styles.css" />
+    <title>Accueil</title>
+  </head>
+  <body>
+<!---------------------------Création d'un titre pour le format mobile------------------------------->
+    <div class="titre"> <h1>Accueil</h1> </div>
+<!-------------------------------------------Fin----------------------------------------------------->
+<!---------------------------------------Début de la nav -------------------------------------------->  
+    <nav>
+      <div class="lien-nav">
+        <ul>
+          <li class="pageActive"><a href="accueil.html"> Accueil </a></li>
+          <li><a href="competences.html">Compétences</a></li>
+          <li><a href="experiences.html">Expériences</a></li>
+          <li><a href="loisirs.html">Loisirs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <img src="images/white_menu_icon.png" alt="" class="menu-hamburger">
+    </nav>
+<!-----------------------------------------Fin de la nav --------------------------------------------->
+<!-----------Création de la page et séparation en deux parties (gauche et droite) --------------------->
+    <div class="page">
+      <div class="pageGauche">
+        <img src="images/photo_perso.jpg" alt="">
+      </div>
+      <div class="pageDroite">
+        <h1 class="presentation">
+          Salut, je suis <span class="nom">Yotam Weber</span> .
+          Etudiant en BUT Informatique.
+        </h1>
+        <p>
+          Je suis étudiant en BUT Informatique,<br> voici mon e-Portefolio ! 
+        </p>
+<!----------------------------Bouton de téléchargement du CV -------------------------------------->
+        <div class="containerBouton">
+          <a href="#" class="bouton">
+            <span class="textBouton">Télécharger mon CV</span>
+            <span class="iconBouton"><i class="fas fa-download"></i></span>
+          </a>
+        </div>
+<!------------------------------------Fin du bouton ------------------------------------------------>
+
+      </div>
+    </div>
+<!-------------------------------------Fin de la page ---------------------------------------------->
+  </body>
+<!-------------------------------Script qui permet de créer une nouvelle classe  "mobile-menu"
+     quand l'image du menu-hamburger est cliqué------------------------------------------->
+  <script>
+    const menuHamburger = document.querySelector(".menu-hamburger")
+    const navLinks = document.querySelector(".lien-nav")
+
+    menuHamburger.addEventListener('click',()=>{
+    navLinks.classList.toggle('mobile-menu')
+    })
+  </script>
+<!-------------------------------Fin du script menu-hamburger------------------------------------------->
+</html>
